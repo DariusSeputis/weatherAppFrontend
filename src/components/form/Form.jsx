@@ -66,7 +66,13 @@ const Form = () => {
       .finally(() => setLoadingLocation(false));
 
     axios
-      .post(backendUri, dataForBackend)
+      .post(backendUri, dataForBackend, {
+        headers: {
+          'content-type': 'text/json',
+          'Access-Control-Allow-Origin':
+            'https://weather-app-homework.herokuapp.com',
+        },
+      })
       .then((res) => console.log('didly done it'))
       .catch((err) => console.log(err));
   };
