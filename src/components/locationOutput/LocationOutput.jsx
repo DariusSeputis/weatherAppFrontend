@@ -55,9 +55,8 @@ const LocationOutput = () => {
         axios
           .post(backendUri, dataForBackend, {
             headers: {
-              'content-type': 'text/json',
-              'Access-Control-Allow-Origin':
-                'https://weather-app-homework.herokuapp.com',
+              'content-type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
             },
           })
           .then((res) => console.log('didly done it'))
