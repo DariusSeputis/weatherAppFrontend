@@ -5,7 +5,7 @@ import { LocationContext, UserNameContext } from '../../App';
 import { WeatherContext } from '../../App';
 import { StyledUl } from './LocationOutput.styled';
 
-const backendUri = 'https://weather-app-homework.herokuapp.com//currentWeather';
+const backendUri = 'https://weather-app-homework.herokuapp.com/currentWeather';
 
 const LocationOutput = () => {
   // States
