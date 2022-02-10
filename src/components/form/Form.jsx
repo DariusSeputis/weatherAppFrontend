@@ -10,7 +10,7 @@ import {
 import { LocationContext } from '../../App';
 import { UserNameContext } from '../../App';
 
-const backendUri = 'http://127.0.0.1:5000/location';
+const backendUri = 'https://weather-app-homework.herokuapp.com/location';
 
 const Form = () => {
   // States

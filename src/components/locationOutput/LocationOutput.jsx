@@ -5,7 +5,7 @@ import { LocationContext, UserNameContext } from '../../App';
 import { WeatherContext } from '../../App';
 import { StyledUl } from './LocationOutput.styled';
 
-const backendUri = 'http://127.0.0.1:5000/currentWeather';
+const backendUri = 'https://weather-app-homework.herokuapp.com//currentWeather';
 
 const LocationOutput = () => {
   // States
@@ -19,9 +19,7 @@ const LocationOutput = () => {
   // Context
   const { fetchedLocations, loading } = useContext(LocationContext);
   const {
-    currentWeatherData,
     setCurrentWeatherData,
-    loadingCurrentWeather,
     setLoadingCurrentWeather,
     setDailyWeatherData,
     setLoadingDailyWeather,
