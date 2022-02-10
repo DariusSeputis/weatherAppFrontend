@@ -54,7 +54,7 @@ const LocationOutput = () => {
         };
         axios
           .post(backendUri, dataForBackend)
-          .then((res) => console.log(res.status))
+          .then((res) => console.log('didly done it'))
           .catch((err) => console.log(err));
       })
       .catch((err) => {
