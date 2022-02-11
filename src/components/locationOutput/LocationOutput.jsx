@@ -60,7 +60,7 @@ const LocationOutput = () => {
               'Access-Control-Allow-Origin': '*',
             },
           })
-          .then((res) => console.log('didly done it'))
+          .then((res) => console.log(res))
           .catch((err) => setFetchError(err));
       })
       .catch((err) => {
