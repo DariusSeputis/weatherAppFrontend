@@ -18,6 +18,7 @@ const Form = () => {
   const [searchText, setSearchText] = useState('');
   const [searchErrMessage, setSearchErrMessage] = useState('');
   const [locationErrMessage, setLocationErrMessage] = useState('');
+  const [fetchError, setFetchError] = useState('');
 
   // Context
   const { setFetchedLocations, loadingLocation, setLoadingLocation } =
@@ -68,12 +69,12 @@ const Form = () => {
     axios
       .post(backendUri, dataForBackend, {
         headers: {
-          'content-type': 'application/json',
+          'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
       })
       .then((res) => console.log('didly done it'))
-      .catch((err) => console.log(err));
+      .catch((err) => setFetchError(err));
   };
 
   return (

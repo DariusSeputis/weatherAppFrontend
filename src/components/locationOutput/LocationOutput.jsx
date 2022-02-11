@@ -15,6 +15,7 @@ const LocationOutput = () => {
     useState('');
   const [fetchingDailyWeatherError, setFetchingDailyWeatherError] =
     useState('');
+  const [fetchError, setFetchError] = useState('');
 
   // Context
   const { fetchedLocations, loading } = useContext(LocationContext);
@@ -55,12 +56,12 @@ const LocationOutput = () => {
         axios
           .post(backendUri, dataForBackend, {
             headers: {
-              'content-type': 'application/json',
+              'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': '*',
             },
           })
           .then((res) => console.log('didly done it'))
-          .catch((err) => console.log(err));
+          .catch((err) => setFetchError(err));
       })
       .catch((err) => {
         setFetchingCurrentWeatherError(err.response.data);
