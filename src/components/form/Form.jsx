@@ -73,7 +73,7 @@ const Form = () => {
           'Access-Control-Allow-Origin': '*',
         },
       })
-      .then((res) => console.log(res))
+      .then((res) => console.log(res.data))
       .catch((err) => setFetchError(err));
   };
 
